@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import ChatPage from "../../pages/ChatPage";
-import ChatsPage from "../../pages/ChatsPage";
+import ChatsPage from "../../pages/ChatListPage";
 import ErrorPage from "../../pages/ErrorPage";
 import ProfilePage from "../../pages/ProfilePage";
 import AuthGuard from "../guard/AuthGuard";

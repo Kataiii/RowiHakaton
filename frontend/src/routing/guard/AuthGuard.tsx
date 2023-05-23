@@ -1,4 +1,5 @@
 import { Navigate } from "react-router-dom";
+import { AUTH_ROUTE_PATH } from "../constatns";
 
 
 interface AuthGuardProps{
@@ -11,10 +12,8 @@ const AuthGuard : React.FC<AuthGuardProps> = ({children}) => {
 
     return(
         isAuthorized
-            ? 
-            children
-            :
-            <Navigate to={'-1'} replace/>
+            ?  children
+            : <Navigate to={AUTH_ROUTE_PATH} replace/>
     )
 }
 
