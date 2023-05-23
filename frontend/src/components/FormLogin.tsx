@@ -15,7 +15,9 @@ const FormLogin = () => {
                     <a className={styles.FormLink} href='#'>Забыли пароль?</a>
                 </div>
             </div>
-            <PrimaryButton action={() => console.log('Hello world')} content='Войти'/>
+            <div className={styles.FormButtonWrap}>
+                <PrimaryButton action={() => console.log('Hello world')} content='Войти'/>
+            </div>
         </div>
     )
 }

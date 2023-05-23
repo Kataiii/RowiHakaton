@@ -1,6 +1,11 @@
+import FormLogin from "../components/FormLogin";
+import styles from './css/LoginPage.module.css';
+
 const LoginPage = () => {
     return(
-        <div></div>
+        <div className={styles.LoginPageDiv}>
+            <FormLogin/>
+        </div>
     )
 }
 

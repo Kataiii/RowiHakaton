@@ -18,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: AUTH_ROUTE_PATH,
-    element: <div>sfsf</div>,
+    element: <LoginPage/>,
   },
   {
     path: CHATS_ROUTE_PATH,
