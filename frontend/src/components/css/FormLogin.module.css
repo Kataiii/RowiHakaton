@@ -1,0 +1,58 @@
+.FormDiv{
+    width: 30%;
+    min-width: 375px;
+    margin: 0 auto;
+    background-image: url('../../assets/images/loginform-image.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+.FormWrapDiv{
+    min-height: 150px;
+    width: 90%;
+    margin: 15px auto 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.FormTitle{
+    font-family: 'Stolzl';
+    font-weight: 400;
+    font-size: 24px;
+    color: #14004B;
+}
+
+.FormInput{
+    height: 48px;
+    background-color: #FEFEFE;
+    border: 1px solid #E3E5E6;
+    border-radius: 8px;
+}
+
+.FormInput:hover{
+    border: 1px solid #293f99;
+}
+
+.FormInput:active{
+    border: 1px solid #19275e;
+}
+
+.FormDivLink{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.FormLink{
+    color: #4164EE;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+}
