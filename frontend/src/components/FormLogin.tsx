@@ -1,7 +1,5 @@
 import styles from './css/FormLogin.module.css';
 import { Button, Form, Input } from 'antd';
-import PrimaryButton from './PrimaryButton';
-import { useForm } from 'antd/es/form/Form';
 import { useAppDispatch, useAppSelector } from '../store/store';
 import { login } from '../store/slices/viewer/asyncActions';
 import { viewerSelectors } from '../store/slices/viewer';
@@ -65,8 +63,7 @@ const FormLogin = () => {
                     </div>
                     <div className={styles.FormButtonWrap}>
                         <Form.Item>
-                            <Button htmlType='submit' loading={loginStatus == RequestStatus.LOADING}>Войти</Button>
-                            {/* <PrimaryButton content='Войти' /> */}
+                            <Button style={{width: 200}} htmlType='submit' loading={loginStatus == RequestStatus.LOADING}>Войти</Button>
                         </Form.Item>
                     </div>
                 </div>
