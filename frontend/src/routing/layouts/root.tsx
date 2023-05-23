@@ -5,7 +5,8 @@ interface RoleGuardProps{
 
 const Root = () => {
     return(
-        <div></div>
+        <div>
+        </div>
     )
 }
 

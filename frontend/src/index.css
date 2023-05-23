@@ -13,3 +13,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Stolzl";
+  src: local("StolzlRegular"),
+   url("./assets/fonts/stolzl_regular.otf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: local("StolzlMedium"),
+   url("./assets/fonts/stolzl_medium.otf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: local("StolzlBold"),
+   url("./assets/fonts/stolzl_bold.otf") format("truetype");
+  font-weight: 700;
+}
