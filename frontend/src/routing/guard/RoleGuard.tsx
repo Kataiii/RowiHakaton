@@ -1,19 +1,19 @@
 import { Navigate } from "react-router-dom";
 
 
-interface RoleGuardProps{
-    children : React.ReactElement;
+interface RoleGuardProps {
+    children: React.ReactElement;
 }
 
-const RoleGuard : React.FC<RoleGuardProps> = ({children}) => {
-    let isUser : boolean = true;
+const RoleGuard: React.FC<RoleGuardProps> = ({ children }) => {
+    let isUser: boolean = true;
 
-    return(
+    return (
         isUser
-            ? 
+            ?
             children
             :
-            <Navigate to={'-1'} replace/>
+            <Navigate to={'-1'} replace />
     )
 }
 

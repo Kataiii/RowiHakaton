@@ -10,6 +10,8 @@ import './assets/fonts/stolzl_light.otf';
 import './assets/fonts/stolzl_medium.otf';
 import './assets/fonts/stolzl_regular.otf';
 import './assets/fonts/stolzl_thin.otf';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -17,5 +19,8 @@ const root = ReactDOM.createRoot(
 
 
 root.render(
-  <RouterProvider router={router} />
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
+  
 );

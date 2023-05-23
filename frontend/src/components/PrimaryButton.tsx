@@ -3,7 +3,7 @@ import styles from './css/Button.module.css'
 
 interface ButtonProps{
     content: string;
-    action: () => void;
+    action?: () => void;
 }
 
 const PrimaryButton = (props: ButtonProps) => {

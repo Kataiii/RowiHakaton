@@ -1,19 +1,20 @@
 import { Navigate } from "react-router-dom";
 import { AUTH_ROUTE_PATH } from "../constatns";
+import { useAppSelector } from "../../store/store";
+import { viewerSelectors } from "../../store/slices/viewer";
 
 
-interface AuthGuardProps{
-    children : React.ReactElement;
+interface AuthGuardProps {
+    children: React.ReactElement;
 }
 
-const AuthGuard : React.FC<AuthGuardProps> = ({children}) => {
-    // let isAuthorized : boolean = auth.formLogin.isAuthorised || registUser.formRegist.isRegist;
-    let isAuthorized : boolean = true;
+const AuthGuard: React.FC<AuthGuardProps> = ({ children }) => {
+    const isAuthorized = useAppSelector(viewerSelectors.selectIsAuth);
 
-    return(
+    return (
         isAuthorized
-            ?  children
-            : <Navigate to={AUTH_ROUTE_PATH} replace/>
+            ? children
+            : <Navigate to={AUTH_ROUTE_PATH} replace />
     )
 }
 
