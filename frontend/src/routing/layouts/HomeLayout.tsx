@@ -27,7 +27,7 @@ export const HomeLayout: React.FC = () => {
                             <Row className={isSelected(item.to)?styles.RowActive:styles.Row} style={{ width: '90%', marginBottom: '3%'}} gutter={[0, 2]}>
                                 <img className={styles.IconImage} src={item.icon} alt='icon'></img>
                                 <div className={styles.RowContentWrap}>
-                                    <p className={styles.RowContent}>{item.label}</p>
+                                    <p className={isSelected(item.to)?styles.RowContentActive:styles.RowContent}>{item.label}</p>
                                 </div>
                             </Row>
                         </NavLink>

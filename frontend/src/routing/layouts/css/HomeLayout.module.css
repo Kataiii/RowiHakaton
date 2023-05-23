@@ -21,6 +21,18 @@
     display: block;
 }
 
+.RowContentActive{
+    font-family: 'Stolzl';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FEFEFE;
+    margin: 0;
+    display: block;
+}
+
+
+
 .RowContentWrap{
     margin: 2%;
     display: flex;
@@ -43,9 +55,13 @@
 
 .RowActive{
     border-radius: 20px;
-    background-color: #D1DAFA;
+    background-color: #14004B;
 }
 
 .RowActive:hover{
     background-color: #E8ECFD;
+}
+
+.RowActive:hover .RowContentActive{
+    color: #14004B;
 }

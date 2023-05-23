@@ -1,0 +1,13 @@
+.SearchDivWrap{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.SearchDiv input{
+    border: 1px solid #D0D5DD;
+    border-radius: 35px;
+}
+
+.SearchDiv span{
+    border-radius: 35px;
+}
