@@ -5,6 +5,7 @@ import { AUTH_ROUTE_PATH, CHATS_ROUTE_PATH, CHAT_ROUTE_PATH, PROFILE_ROUTE_PATH 
 import AuthGuard from "./guard/AuthGuard";
 import { HomeLayout } from "./layouts/HomeLayout";
 import ProfilePage from "../pages/ProfilePage";
+import LoginPage from "../pages/LoginPage";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
   },
   {
     path: AUTH_ROUTE_PATH,
-    element: <div>sfsf</div>,
+    element: <LoginPage/>,
   },
   {
     element: <AuthGuard children={<HomeLayout />} />,
