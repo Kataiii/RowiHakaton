@@ -1,22 +1,23 @@
 import { CHATS_ROUTE_PATH, PROFILE_ROUTE_PATH } from "../constatns"
-import {UserOutlined, MessageOutlined} from '@ant-design/icons';
+import User from '../../assets/images/icons/icon-user.svg';
+import Chat from '../../assets/images/icons/icon-chat.svg';
 
 interface SiderNavItem {
     label: string,
     to: string,
-    icon: React.ReactElement
+    icon: any
 }
 
 
-export const siderNavConfig: SiderNavItem[] = [
+export let siderNavConfig: SiderNavItem[] = [
     {
         label: 'Профиль',
         to: PROFILE_ROUTE_PATH,
-        icon: <UserOutlined />
+        icon: User
     },
     {
         label: 'Чаты',
         to: CHATS_ROUTE_PATH,
-        icon: <MessageOutlined />
+        icon: Chat
     }
 ]

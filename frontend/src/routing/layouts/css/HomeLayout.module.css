@@ -1,0 +1,51 @@
+.LogoDivWrap{
+    padding: 7% 4%;
+}
+
+.LogoImage{
+    display: block;
+    margin: 0 auto;
+}
+
+.IconImage{
+    width: 40px;
+}
+
+.RowContent{
+    font-family: 'Stolzl';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #14004B;
+    margin: 0;
+    display: block;
+}
+
+.RowContentWrap{
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.RowWrap{
+    display: flex;
+    justify-content: center;
+}
+
+.Row{
+    border-radius: 20px;
+}
+
+.Row:hover{
+    background-color: #E8ECFD;
+}
+
+.RowActive{
+    border-radius: 20px;
+    background-color: #D1DAFA;
+}
+
+.RowActive:hover{
+    background-color: #E8ECFD;
+}
