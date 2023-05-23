@@ -4,7 +4,6 @@ import React from 'react';
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 
 import { Content } from 'antd/es/layout/layout';
-import Column from 'antd/es/table/Column';
 import { siderNavConfig } from '../configs/siderNavConfig';
 
 export const HomeLayout: React.FC = () => {
