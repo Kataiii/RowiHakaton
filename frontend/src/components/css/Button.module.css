@@ -37,3 +37,25 @@
 .Button:active{
     background: #19275e;
 }
+
+.BtnWrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainBtn{
+    width: 48%;
+    background-color: #4164EE;
+    border-radius: 30px;
+    padding: 1%;
+    color: #FEFEFE;
+    font-family: 'Stolzl';
+}
+
+.MainBtn:hover{
+    background-color: #293f99;
+}
+
+.MainBtn:active{
+    background-color: #19275e;
+}
