@@ -1,4 +1,5 @@
 import { Chat } from "../entities/Chat";
+import { ChatInfo } from "../entities/ChatInfo";
 import { Message } from "../entities/Message";
 import { Viewer } from "../entities/Viewer";
 import { LoginRequest } from "./types";
@@ -52,6 +53,34 @@ export const api = {
         }));
 
         return new Promise(resolve => setTimeout(() => resolve(chats), 1000));
+    },
+
+    getChatInfo: async (chatId: number) => {
+        return new Promise<ChatInfo>((resolve, reject) => setTimeout(() => resolve({
+            id: chatId,
+            messages: [
+                {id: 1, text: 'ыаыаымым', senderId: 3, time: new Date()},
+                {id: 2, text: 'vdcb', senderId: 3, time: new Date()},
+                {id: 3, text: 'ыаыfgngnаымым', senderId: 1, time: new Date()},
+                {id: 4, text: 'ыысысым', senderId: 1, time: new Date()},
+                {id: 5, text: 'ыучквиртоьл', senderId: 1, time: new Date()},
+                {id: 6, text: 'мпиротьлбд', senderId: 3, time: new Date()},
+                {id: 7, text: 'э.юбьтим', senderId: 3, time: new Date()},
+                {id: 8, text: '987654', senderId: 3, time: new Date()},
+                {id: 9, text: 'ыаыаымым', senderId: 3, time: new Date()},
+                {id: 10, text: 'ыаыаымым', senderId: 3, time: new Date()},
+                {id: 11, text: 'ыаыаымым', senderId: 1, time: new Date()}
+            ],
+            status: 'opened',
+            companiom: {
+                id: 3,
+                token: 'yvgnjmkjkbhsbknb scs',
+                name: 'Максим',
+                role: 'consultant',
+                mail: 'pash@mail.com',
+                password: '000000'
+            },
+        }), 1000))
     },
 
     getChatHistory: async (chatId: number) => {

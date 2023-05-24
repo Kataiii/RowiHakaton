@@ -31,7 +31,8 @@ export const chatSlice = createSlice({
         builder.addCase(getChatInfo.pending, (state) => {
             state.getChatInfoStatus = RequestStatus.LOADING;
         }),
-        builder.addCase(getChatInfo.fulfilled, state => {
+        builder.addCase(getChatInfo.fulfilled, (state, action) => {
+            state.info = action.payload;
             state.getChatInfoStatus = RequestStatus.SUCCESSFUL;
         })
     },
