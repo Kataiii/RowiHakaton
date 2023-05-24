@@ -1,6 +1,6 @@
-import { CHATS_ROUTE_PATH, PROFILE_ROUTE_PATH } from "../constatns"
-import User from '../../assets/images/icons/icon-user.svg';
-import Chat from '../../assets/images/icons/icon-chat.svg';
+import { CHATS_ROUTE_PATH, PROFILE_ROUTE_PATH } from "../routing/constatns"
+import User from '../assets/images/icons/icon-user.svg';
+import Chat from '../assets/images/icons/icon-chat.svg';
 
 interface SiderNavItem {
     label: string,

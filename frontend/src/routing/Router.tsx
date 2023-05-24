@@ -6,9 +6,6 @@ import AuthGuard from "./guard/AuthGuard";
 import { HomeLayout } from "./layouts/HomeLayout";
 import ProfilePage from "../pages/ProfilePage";
 import LoginPage from "../pages/LoginPage";
-import { useAppSelector } from "../store/store";
-import { selectIsAuth } from "../store/slices/viewer/selectors";
-import { authLoader } from "./loaders/authLoader";
 
 const router = createBrowserRouter([
   {

@@ -4,7 +4,7 @@ import React from 'react';
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import Logo from '../../assets/images/logo.svg'
 import { Content } from 'antd/es/layout/layout';
-import { siderNavConfig } from '../configs/siderNavConfig';
+import { siderNavConfig } from '../../configs/siderNavConfig';
 import styles from './css/HomeLayout.module.css';
 
 export const HomeLayout: React.FC = () => {
