@@ -17,3 +17,23 @@
 .PrimaryButton:active{
     background: #19275e;
 }
+
+.Button{
+    background: #4164EE;
+    border-radius: 48px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #FEFEFE;
+    padding: 8px 30px;
+    border: none;
+}
+
+.Button:hover{
+    background: #293f99;
+}
+
+.Button:active{
+    background: #19275e;
+}
