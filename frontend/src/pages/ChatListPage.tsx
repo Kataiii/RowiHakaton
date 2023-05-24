@@ -2,11 +2,11 @@ import React, { useEffect, useMemo } from 'react';
 import { Button, Input, Space, Tabs } from 'antd';
 import styles from './css/ChatListPage.module.css';
 import { useAppDispatch, useAppSelector } from '../store/store';
-import { chatsSelectors } from '../store/slices/chat';
+import { chatsSelectors } from '../store/slices/pool-of-chats';
 import { ChatsContainer } from '../components/ChatsContainer';
-import { selectGetClosedStatus, selectGetOpenedStatus } from '../store/slices/chat/selectors';
+import { selectGetClosedStatus, selectGetOpenedStatus } from '../store/slices/pool-of-chats/selectors';
 import { RequestStatus } from '../lib/requestStatus';
-import { getClosedChats, getOpenedChats } from '../store/slices/chat/asyncActions';
+import { getClosedChats, getOpenedChats } from '../store/slices/pool-of-chats/asyncActions';
 import { ChatsClosedPage } from './ChatsClosedPage';
 import { ChatsOpenedPage } from './ChatsOpenedPage';
 

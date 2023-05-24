@@ -1,40 +1,39 @@
-import { createEntityAdapter, createSlice, isAnyOf } from "@reduxjs/toolkit";
-import { Chat } from "../../../entities/Chat";
+import { createAction, createEntityAdapter, createSlice } from "@reduxjs/toolkit";
+import { Message } from "../../../entities/Message";
+import { message } from "antd";
 import { RequestStatus } from "../../../lib/requestStatus";
-import { getClosedChats, getOpenedChats } from "./asyncActions";
+import { Stream } from "stream";
+import { Viewer } from "../../../entities/Viewer";
+import { ChatInfo } from "../../../entities/ChatInfo";
+import { getChatInfo } from "./asyncActions";
 
 
-export const chatsEntityAdapter = createEntityAdapter<Chat>({ selectId: (chat) => chat.id });
+interface ChatState {
+    info: ChatInfo | null,
+    getChatInfoStatus: RequestStatus
+}
 
-const initialState = chatsEntityAdapter.getInitialState({
-    getClosedChatsRequest: RequestStatus.NEVER,
-    getOpenedChatsRequest: RequestStatus.NEVER
-})
+const initialState: ChatState = {
+    info: null,
+    getChatInfoStatus: RequestStatus.NEVER
+}
 
-export const chatsSlice = createSlice({
-    name: 'chatsSlice',
+const addMessage = createAction<Message>('addMessage');
+
+export const chatSlice = createSlice({
+    name: 'chatSlice',
     initialState: initialState,
     reducers: {},
     extraReducers(builder) {
-        builder.addCase(getOpenedChats.pending, state => {
-            state.getOpenedChatsRequest = RequestStatus.LOADING;
+        builder.addCase(addMessage, (state, action) => {
+            state.info?.messages.push(action.payload);
         }),
-            builder.addCase(getClosedChats.pending, state => {
-                state.getClosedChatsRequest = RequestStatus.LOADING;
-            }),
-            builder.addCase(getClosedChats.fulfilled, (state, action) => {
-                state.getClosedChatsRequest = RequestStatus.SUCCESSFUL;
-            }),
-            builder.addCase(getOpenedChats.fulfilled, (state, action) => {
-                state.getOpenedChatsRequest = RequestStatus.SUCCESSFUL;
-            }),
-            builder.addMatcher(
-                isAnyOf(
-                    getClosedChats.fulfilled,
-                    getOpenedChats.fulfilled
-                ), (state, action) => {
-                    const chats = action.payload as Chat[];
-                    chatsEntityAdapter.setMany(state, chats);
-                })
+        builder.addCase(getChatInfo.pending, (state) => {
+            state.getChatInfoStatus = RequestStatus.LOADING;
+        }),
+        builder.addCase(getChatInfo.fulfilled, state => {
+            state.getChatInfoStatus = RequestStatus.SUCCESSFUL;
+        })
     },
+
 })

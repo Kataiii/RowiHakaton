@@ -2,7 +2,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { socketMiddleware } from "./middlewares/socketMiddleware";
 import { viewerReducer } from "./slices/viewer/";
-import { chatsReducer } from "./slices/chat/";
+import { chatsReducer } from "./slices/pool-of-chats";
 
 
 

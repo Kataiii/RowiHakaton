@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { ChatsContainer } from "../components/ChatsContainer";
 import { RequestStatus } from "../lib/requestStatus";
-import { chatsSelectors } from "../store/slices/chat";
-import { getOpenedChats } from "../store/slices/chat/asyncActions";
+import { chatsSelectors } from "../store/slices/pool-of-chats";
+import { getOpenedChats } from "../store/slices/pool-of-chats/asyncActions";
 import { useAppDispatch, useAppSelector } from "../store/store";
 
 export const ChatsOpenedPage: React.FC= () => {

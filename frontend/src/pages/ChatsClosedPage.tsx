@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { ChatsContainer } from "../components/ChatsContainer";
 import { RequestStatus } from "../lib/requestStatus";
-import { chatsSelectors } from "../store/slices/chat";
-import { getClosedChats } from "../store/slices/chat/asyncActions";
-import { selectGetClosedStatus } from "../store/slices/chat/selectors";
+import { chatsSelectors } from "../store/slices/pool-of-chats";
+import { getClosedChats } from "../store/slices/pool-of-chats/asyncActions";
+import { selectGetClosedStatus } from "../store/slices/pool-of-chats/selectors";
 import { useAppDispatch, useAppSelector } from "../store/store";
 
 
