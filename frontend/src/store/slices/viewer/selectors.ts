@@ -25,3 +25,13 @@ export const selectErrorText = createDraftSafeSelector(
     [(state: RootState) => state.viewerReducer.errorText],
     (errorText) => errorText
 );
+
+export const selectIsManager = createDraftSafeSelector(
+    [(state: RootState) => state.viewerReducer.viewer?.role],
+    (role) => role != 'client'
+);
+
+export const selectRole = createDraftSafeSelector(
+    [(state: RootState)=> state.viewerReducer.viewer],
+    (viewer) => viewer?.role
+)
