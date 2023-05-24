@@ -7,6 +7,7 @@ import { RequestStatus } from '../lib/requestStatus';
 import { useNavigate } from 'react-router';
 import { useEffect } from 'react';
 import { CHATS_ROUTE_PATH } from '../routing/constatns';
+import Loader from './PageLoader';
 
 const EMAIL_NAME = 'email';
 const PASSWORD_NAME = 'password';
