@@ -8,8 +8,10 @@ import { RequestStatus } from '../lib/requestStatus';
 import PageLoader from '../components/PageLoader';
 import { chatSelectors } from '../store/slices/chat';
 import styles from './css/ChatListPage.module.css'
+import MainInputChat from '../components/MainInputChat';
 
 const ChatPage: React.FC = () => {
+    
 
     const {id} = useParams();
     const dispatch = useAppDispatch();
@@ -36,6 +38,7 @@ const ChatPage: React.FC = () => {
                 contentHeader={companion.name + ' '+ companion.role} 
                 status='статус'/>
                 {getChatInfoStatus == RequestStatus.LOADING ? <PageLoader/> : <ChatCanvas messages={messages}/>}
+            <MainInputChat/>
         </div>
     )
 }

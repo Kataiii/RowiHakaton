@@ -1,0 +1,26 @@
+.DivMainInpit{
+    display: flex;
+    padding: 1.2%;
+    background-color: #FEFEFE;
+}
+
+.Icon{
+    cursor: pointer;
+}
+
+.SendBtn{
+    cursor: pointer;
+    background-color: #4164EE;
+    color: #FEFEFE;
+    font-family: 'Inter';
+    border-radius: 12px;
+    border: none;
+}
+
+.SendBtn:hover{
+    background-color: #3551c1;
+}
+
+.SendBtn:active{
+    background-color: #293f97;
+}

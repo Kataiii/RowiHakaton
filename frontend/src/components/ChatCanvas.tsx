@@ -1,6 +1,6 @@
 import { Message } from "../entities/Message";
 import MessageBlock from "./Message";
-import styles from './css/ChatCard.module.css'
+import styles from './css/ChatCard.module.css';
 
 
 const ChatCanvas = (props: { messages: Message[]}) => {
