@@ -3,12 +3,14 @@ import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { socketMiddleware } from "./middlewares/socketMiddleware";
 import { viewerReducer } from "./slices/viewer/";
 import { chatsReducer } from "./slices/pool-of-chats";
+import { chatReducer } from "./slices/chat";
 
 
 
 const rootReducer = combineReducers({
     viewerReducer,
-    chatsReducer
+    chatsReducer,
+    chatReducer
 });
 
 
