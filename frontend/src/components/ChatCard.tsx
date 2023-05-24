@@ -7,7 +7,7 @@ export interface ChatCardProps{
     lastMessageContent: string;
     time: Date;
 }
-
+//TODO сделать стили и нормально дату
 
 const ChatCard = (props: ChatCardProps) => {
     return(
