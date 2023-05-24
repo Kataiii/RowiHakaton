@@ -1,6 +1,11 @@
-.SearchDivWrap{
+.AppDiv{
     width: 90%;
     margin: 0 auto;
+}
+
+.SearchDivWrap{
+    width: 90%;
+    margin: 1% auto;
 }
 
 .SearchDiv input{
@@ -8,6 +13,10 @@
     border-radius: 35px;
 }
 
-.SearchDiv span{
+.SearchDiv *{
     border-radius: 35px;
+}
+
+.Tabs{
+    font-family: 'Stolzl';
 }

@@ -17,7 +17,7 @@ export const api = {
             id: i,
             isClosed: isClosed,
             title: `Чат #${i}`,
-            lastMessage: 'Последнее сообщение',
+            lastMessage: 'Последнее моей проблемы сообщение',
             lastSenderName: 'Евгений Палыч',
             lastSenderRoleName: 'Менеджер'
         }));

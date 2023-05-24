@@ -1,0 +1,92 @@
+.DivChatCard{
+    width: 100%;
+    border: 3px solid #E8ECFD;
+    border-radius: 35px;
+    padding: 10px ;
+}
+
+.DivChatCard:hover{
+    background-color: #E8ECFD;
+}
+
+.DivChatCard:active{
+    background-color: #b4b7c5;
+}
+
+.DivTitleWrap{
+    display: flex;
+}
+
+.DivChatTitle{
+    display: block;
+    font-family: 'Stolzl';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #14004B;
+    margin: 0;
+}
+
+.DivChatTitleNumber{
+    display: block;
+    font-family: 'Stolzl';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #4164EE;
+    margin: 0;
+}
+
+.DivChatTitleMessage{
+    display: block;
+    font-family: 'Stolzl';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #14004B;
+    margin: 0 0 5%;
+}
+
+.DivTimeWrap{
+    display: flex;
+    justify-content: end;
+}
+
+.DivChatTime{
+    display: block;
+    margin: 0;
+    margin-left: 5%;
+    color: #14004B;
+    opacity: 0.7;
+}
+
+.DivChatTimeOpen{
+    display: block;
+    margin: 0;
+    margin-left: 1%;
+    color: #14004B;
+    opacity: 0.7;
+}
+
+.DivChatWrapOpen{
+    display: flex;
+}
+
+.DivLasMessage{
+    margin: 0;
+    color: #14004B;
+}
+
+.DivCardOpen{
+    border: 3px solid #E8ECFD;
+    border-radius: 35px;
+    padding: 10px ;
+}
+
+.DivCardOpen:hover{
+    background-color: #E8ECFD;
+}
+
+.DivCardOpen:active{
+    background-color: #b4b7c5;
+}

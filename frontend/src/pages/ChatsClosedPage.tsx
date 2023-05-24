@@ -19,6 +19,6 @@ export const ChatsClosedPage: React.FC= () => {
     }, [])
 
     return (
-        <ChatsContainer chats={closedChats} isLoading = {closedChatsLoadingStatus == RequestStatus.LOADING}/>
+        <ChatsContainer isActiveChats={false} chats={closedChats} isLoading = {closedChatsLoadingStatus == RequestStatus.LOADING}/>
     )
 }

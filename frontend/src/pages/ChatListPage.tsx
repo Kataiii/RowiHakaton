@@ -26,17 +26,17 @@ const ChatsPage: React.FC = () => {
     const tabs = useMemo<TabBarItem[]>(() => [
         {
             key: 'opened',
-            label: 'активные чаты',
-            children: <ChatsOpenedPage/>
+            label: 'Активные чаты',
+            children: <ChatsOpenedPage />
         },
         {
             key: 'closed',
-            label: 'закрытые чаты',
-            children: <ChatsClosedPage/>
+            label: 'Закрытые чаты',
+            children: <ChatsClosedPage />
         },
     ], []);
 
-    
+
 
     return (
         <div>
@@ -44,12 +44,14 @@ const ChatsPage: React.FC = () => {
                 <Search className={styles.SearchDiv} placeholder="Поиск" onSearch={onSearch}
                     style={{ borderRadius: '35px' }} />
             </div>
-            <Tabs
-                defaultActiveKey="1"
-                type="card"
-                size={'middle'}
-                items={tabs}
-            />
+            <div className={styles.AppDiv}>
+                <Tabs className={styles.Tabs}
+                    defaultActiveKey="1"
+                    type="card"
+                    size={'middle'}
+                    items={tabs}
+                />
+            </div>
         </div>
     )
 }
