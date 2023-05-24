@@ -22,6 +22,9 @@ export const api = {
         }));
 
         return new Promise(resolve => setTimeout(() => resolve(chats), 1000));
-    }
+    },
 
+    getChatHistory: async (chatId: number) => {
+        return new Promise(resolve => setTimeout(() => resolve(null)));
+    }
 }
