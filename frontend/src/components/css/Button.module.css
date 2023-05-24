@@ -41,6 +41,8 @@
 .BtnWrap{
     display: flex;
     justify-content: space-between;
+    background-color: #FEFEFE;
+    padding-top: 1%;
 }
 
 .MainBtn{
@@ -50,6 +52,7 @@
     padding: 1%;
     color: #FEFEFE;
     font-family: 'Stolzl';
+    border: none;
 }
 
 .MainBtn:hover{

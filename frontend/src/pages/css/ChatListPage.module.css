@@ -21,6 +21,20 @@
     font-family: 'Stolzl';
 }
 
-/* .ChatPage{
+.ChatPage{
+    max-height: 100vh;
+    overflow: hidden;
+}
 
-} */
+.Tag{
+    background-color: #4164EE;
+    color: #FEFEFE;
+    font-family: 'Inter';
+    font-size: 15px;
+    padding: 1%;
+    border-radius: 20px;
+}
+
+.Tag:hover{
+    background-color: #314bb5;
+}

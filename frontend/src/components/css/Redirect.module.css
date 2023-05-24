@@ -1,0 +1,44 @@
+.DivRed{
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    background: rgba(9, 14, 34, 0.7);
+    width: 86.5%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Red{
+    background-color: #FEFEFE;
+    margin: 0 auto;
+    width: 40%;
+    opacity: 1;
+    border-radius: 35px;
+    padding: 1% 2%;
+}
+
+.Title{
+    font-family: 'Stolzl';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.RadioGroup{
+    display: flex;
+    flex-direction: column;
+}
+
+.RedDivBtn{
+    display: flex;
+    justify-content: end;
+    margin: 1% 0;
+}
+
+.BtnRed{
+    background-color: #4164EE;
+    color: #FEFEFE;
+    font-family: 'Inter';
+}

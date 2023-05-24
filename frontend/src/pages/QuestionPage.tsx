@@ -11,16 +11,44 @@ import styles from './css/ChatListPage.module.css'
 import MainInputChat from '../components/MainInputChat';
 import { viewerSelectors } from '../store/slices/viewer';
 import ManagerInput from '../components/ManagetInput';
+import { Tag } from 'antd';
+import { Message } from '../entities/Message';
 
-const ChatPage: React.FC = () => {
-    
+interface TagProps{
+    content: string;
+    action?: () => void;
+}
+
+const tags: TagProps[] = [
+    {
+        content: 'Проблема на сайте',
+    },
+    {
+        content: 'Не работает сайт',
+    },
+    {
+        content: 'Оформление кредита',
+    },
+    {
+        content: 'Перенесение срока выплаты',
+    },
+    {
+        content: 'Другое...',
+    }    
+]
+
+const QuestionPage = () => {
+        
 
     const {id} = useParams();
     const dispatch = useAppDispatch();
     
     const role = useAppSelector(viewerSelectors.selectRole);
     const getChatInfoStatus = useAppSelector(chatSelectors.selectLoadingStatus);
-    const messages = useAppSelector(chatSelectors.selectMessages)
+    // const messages = useAppSelector(chatSelectors.selectMessages)
+    const messages: Message[] = [
+        { id: 1, text: 'Здравствуйте! Меня зовут Максим.\n Я ваш консультант. Чем могу помочь?', senderId: 3, time: new Date() }
+    ]
     const companion = useAppSelector(chatSelectors.selectCompanion) ?? {
         id: 1,
         mail: 'mail@mail.ru',
@@ -36,20 +64,18 @@ const ChatPage: React.FC = () => {
 
     return(
         <div className={styles.ChatPage}>
-            <HeaderChat titleHeader={'Чат #'+((parseInt(id?? '')) +1)} 
+            <HeaderChat titleHeader={'Чат техподдержки'} 
                 contentHeader={companion.name + ' '+ companion.role} 
                 status='статус'/>
                 {getChatInfoStatus == RequestStatus.LOADING ? <PageLoader/> : <ChatCanvas messages={messages}/>}
             {
-                role === 'client'
-                ?
-                    <MainInputChat/>
-                :
-                    <ManagerInput/>
+                tags.map((item, index) => {
+                    return <Tag className={styles.Tag} key={index}>{item.content}</Tag>
+                })
             }
             
         </div>
     )
 }
 
-export default ChatPage;
+export default QuestionPage;

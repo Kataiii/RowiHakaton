@@ -1,6 +1,7 @@
 import { Button, Input, Radio, RadioChangeEvent } from "antd";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import styles from './css/Redirect.module.css';
 
 
 const projects: string[] = [
@@ -26,20 +27,24 @@ const RedirectModel = () => {
     };
 
     return(
-        <div>
-            <h1>Перенаправить в:</h1>
-            <Radio.Group onChange={onChange} value={value}>
-                <>
-                    { 
-                        projects.map((item, index) => {
-                            <Radio value={index+1} key={index+1}>{item}</Radio>
-                        })
-                    }
-                </>
-            </Radio.Group>
-            <p>Оставить комментарий:</p>
-            <Input onChange={e => setTextState(e.target.value)} placeholder="Комментарий..." />
-            <Button onClick={onClickHandler}>Перенаправить</Button>
+        <div className={styles.DivRed}>
+            <div className={styles.Red}>
+                <h1 className={styles.Title}>Перенаправить в:</h1>
+                <Radio.Group className={styles.RadioGroup} onChange={onChange} value={value}>
+                    <>
+                        { 
+                            projects.map((item, index) => {
+                                return <Radio value={index+1} key={index+1}>{item}</Radio>
+                            })
+                        }
+                    </>
+                </Radio.Group>
+                <p>Оставить комментарий:</p>
+                <Input onChange={e => setTextState(e.target.value)} placeholder="Комментарий..." />
+                <div className={styles.RedDivBtn}>
+                    <Button className={styles.BtnRed} onClick={onClickHandler}>Перенаправить</Button>
+                </div>
+            </div>
         </div>
     )
 }
