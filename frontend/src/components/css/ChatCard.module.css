@@ -3,6 +3,7 @@
     border: 3px solid #E8ECFD;
     border-radius: 35px;
     padding: 10px ;
+    background-color: #FEFEFE;
 }
 
 .DivChatCard:hover{
@@ -81,6 +82,7 @@
     border: 3px solid #E8ECFD;
     border-radius: 35px;
     padding: 10px ;
+    background-color: #FEFEFE;
 }
 
 .DivCardOpen:hover{

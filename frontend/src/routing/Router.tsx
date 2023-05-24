@@ -7,6 +7,7 @@ import { HomeLayout } from "./layouts/HomeLayout";
 import ProfilePage from "../pages/ProfilePage";
 import LoginPage from "../pages/LoginPage";
 import RoleGuard from "./guard/RoleGuard";
+import PoolChatsPage from "../pages/PoolChatsPage";
 
 const router = createBrowserRouter([
   {
@@ -34,7 +35,7 @@ const router = createBrowserRouter([
       },
       {
         path: CHAT_POOL_PATH,
-        element: <RoleGuard children={<div>Это пул чатов</div>} /> 
+        element: <RoleGuard children={<PoolChatsPage/>} /> 
       }
     ]
   }
