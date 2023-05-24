@@ -1,6 +1,8 @@
-import { CHATS_ROUTE_PATH, PROFILE_ROUTE_PATH } from "../routing/constatns"
+import { CHATS_ROUTE_PATH, CHAT_POOL_PATH, PROFILE_ROUTE_PATH } from "../routing/constatns"
 import User from '../assets/images/icons/icon-user.svg';
 import Chat from '../assets/images/icons/icon-chat.svg';
+import { RootState } from "../store/store";
+import { Role } from "../entities/Viewer";
 
 interface SiderNavItem {
     label: string,
@@ -8,6 +10,14 @@ interface SiderNavItem {
     icon: any
 }
 
+
+export const getSiderNavConfig = (role: Role) => {
+    if (role == 'client') return siderNavConfig;
+    return [
+        ...siderNavConfig,
+        {label: 'Пул чатов', to: CHAT_POOL_PATH, icon: Chat}
+    ]
+}
 
 export let siderNavConfig: SiderNavItem[] = [
     {

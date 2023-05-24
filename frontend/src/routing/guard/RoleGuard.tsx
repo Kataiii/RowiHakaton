@@ -1,4 +1,6 @@
 import { Navigate } from "react-router-dom";
+import { useAppSelector } from "../../store/store";
+import { selectIsManager } from "../../store/slices/viewer/selectors";
 
 
 interface RoleGuardProps {
@@ -6,14 +8,13 @@ interface RoleGuardProps {
 }
 
 const RoleGuard: React.FC<RoleGuardProps> = ({ children }) => {
-    let isUser: boolean = true;
+    
+    const isManager = useAppSelector(selectIsManager);
 
     return (
-        isUser
-            ?
-            children
-            :
-            <Navigate to={'-1'} replace />
+        isManager
+            ? children
+            : <Navigate to={'-1'} replace />
     )
 }
 
