@@ -1,4 +1,5 @@
 import { Chat } from "../entities/Chat";
+import { Message } from "../entities/Message";
 import { Viewer } from "../entities/Viewer";
 import { LoginRequest } from "./types";
 
@@ -12,7 +13,7 @@ export const api = {
     },
 
     getChats: async (isClosed: boolean, token: string) => {
-         const  chats = new Array(5).fill(1).map((_, i) => ({
+        const chats = new Array(5).fill(1).map((_, i) => ({
             id: i,
             isClosed: isClosed,
             title: `Чат #${i}`,
@@ -25,6 +26,15 @@ export const api = {
     },
 
     getChatHistory: async (chatId: number) => {
-        return new Promise(resolve => setTimeout(() => resolve(null)));
+        return new Promise(resolve => setTimeout(() => resolve(
+            new Array(58)
+                .fill('')
+                .map<Message>((_, i) => ({
+                    id: i,
+                    senderId: i % 2,
+                    text: 'соооообщение',
+                    time: new Date()
+                })) 
+        ), 1000));
     }
 }
