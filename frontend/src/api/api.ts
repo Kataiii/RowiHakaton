@@ -37,7 +37,7 @@ export const api = {
         const { mail, password } = request;
         return new Promise<Viewer>((resolve, reject) => setTimeout(() => {
             const existedUser = viewersPool.find(user => user.mail == mail && user.password == password);
-            if(existedUser != undefined) resolve(existedUser);
+            if (existedUser != undefined) resolve(existedUser);
             else reject('Такого пользователя не существует')
         }, 1000));
     },
@@ -59,17 +59,17 @@ export const api = {
         return new Promise<ChatInfo>((resolve, reject) => setTimeout(() => resolve({
             id: chatId,
             messages: [
-                {id: 1, text: 'ыаыаымым', senderId: 3, time: new Date()},
-                {id: 2, text: 'vdcb', senderId: 3, time: new Date()},
-                {id: 3, text: 'ыаыfgngnаымым', senderId: 1, time: new Date()},
-                {id: 4, text: 'ыысысым', senderId: 1, time: new Date()},
-                {id: 5, text: 'ыучквиртоьл', senderId: 1, time: new Date()},
-                {id: 6, text: 'мпиротьлбд', senderId: 3, time: new Date()},
-                {id: 7, text: 'э.юбьтим', senderId: 3, time: new Date()},
-                {id: 8, text: '987654', senderId: 3, time: new Date()},
-                {id: 9, text: 'ыаыаымым', senderId: 3, time: new Date()},
-                {id: 10, text: 'ыаыаымым', senderId: 3, time: new Date()},
-                {id: 11, text: 'ыаыаымым', senderId: 1, time: new Date()}
+                { id: 1, text: 'ыаыаымым', senderId: 3, time: new Date() },
+                { id: 2, text: 'vdcb', senderId: 3, time: new Date() },
+                { id: 3, text: 'ыаыfgngnаымым', senderId: 1, time: new Date() },
+                { id: 4, text: 'ыысысым', senderId: 1, time: new Date() },
+                { id: 5, text: 'ыучквиртоьл', senderId: 1, time: new Date() },
+                { id: 6, text: 'мпиротьлбд', senderId: 3, time: new Date() },
+                { id: 7, text: 'э.юбьтим', senderId: 3, time: new Date() },
+                { id: 8, text: '987654', senderId: 3, time: new Date() },
+                { id: 9, text: 'ыаыаымым', senderId: 3, time: new Date() },
+                { id: 10, text: 'ыаыаымым', senderId: 3, time: new Date() },
+                { id: 11, text: 'ыаыаымым', senderId: 1, time: new Date() }
             ],
             status: 'opened',
             companiom: {
@@ -92,7 +92,16 @@ export const api = {
                     senderId: i % 2,
                     text: 'соооообщение',
                     time: new Date()
-                })) 
+                }))
         ), 1000));
+    },
+
+    sendMessage: async (message: string, senderId: number) => {
+        return new Promise<Message>(resolve => setTimeout(() => resolve({
+            id: 8,
+            text: message,
+            senderId: senderId,
+            time: new Date()
+        }), 300))
     }
 }

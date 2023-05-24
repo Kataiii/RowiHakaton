@@ -5,17 +5,18 @@ import { RequestStatus } from "../../../lib/requestStatus";
 import { Stream } from "stream";
 import { Viewer } from "../../../entities/Viewer";
 import { ChatInfo } from "../../../entities/ChatInfo";
-import { getChatInfo } from "./asyncActions";
-
+import { getChatInfo, sendMessage } from "./asyncActions";
 
 interface ChatState {
     info: ChatInfo | null,
-    getChatInfoStatus: RequestStatus
+    getChatInfoStatus: RequestStatus,
+    sendMessageStatus: RequestStatus
 }
 
 const initialState: ChatState = {
     info: null,
-    getChatInfoStatus: RequestStatus.NEVER
+    getChatInfoStatus: RequestStatus.NEVER,
+    sendMessageStatus: RequestStatus.NEVER
 }
 
 const addMessage = createAction<Message>('addMessage');
@@ -34,6 +35,13 @@ export const chatSlice = createSlice({
         builder.addCase(getChatInfo.fulfilled, (state, action) => {
             state.info = action.payload;
             state.getChatInfoStatus = RequestStatus.SUCCESSFUL;
+        }),
+        builder.addCase(sendMessage.pending, (state) => {
+            state.sendMessageStatus = RequestStatus.LOADING;
+        }),
+        builder.addCase(sendMessage.fulfilled, (state, action) => {
+            state.sendMessageStatus = RequestStatus.SUCCESSFUL;
+            state.info?.messages.push(action.payload);
         })
     },
 
