@@ -92,3 +92,11 @@
 .DivCardOpen:active{
     background-color: #b4b7c5;
 }
+
+.ChatLayout{
+    max-height: 90vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}

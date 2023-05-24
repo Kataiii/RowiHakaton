@@ -1,0 +1,49 @@
+.DivWrap{
+    display: flex;
+    justify-content: start;
+}
+
+.DivWrapMy{
+    display: flex;
+    justify-content: end;
+    padding: 0 1%;
+}
+
+.DivMessageMy{
+    display: inline-block;
+    background-color: #D1DAFA;
+    border-radius: 20px 20px 0 20px ;
+    max-width: fit-content;
+    padding: 1%;
+    margin: 1% 0 1% 2%;
+}
+
+.DivMessage{
+    display: inline-block;
+    background-color: #FEFEFE;
+    border-radius: 20px 20px 20px 0;
+    max-width: fit-content;
+    padding: 1%;
+    margin: 1% 0 1% 2%;
+}
+
+.DivMessage p{
+    margin: 0;
+    display: block;
+    width: fit-content;
+}
+
+.MessageContent{
+    font-size: 15px;
+    color: #14004B;
+}
+
+.TimeDiv{
+    font-size: 10px;
+    color: #4164EE;
+}
+
+.TimeDivWrap{
+    display: flex;
+    justify-content: end;
+}
