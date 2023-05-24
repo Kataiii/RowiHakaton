@@ -1,0 +1,36 @@
+.Header{
+    background-color: #FEFEFE;
+    padding: 1%;
+}
+
+.HeaderDiv{
+    display: flex;
+}
+
+.Image{
+    margin-right: 1%;
+}
+
+.HeaderTitle{
+    font-family: 'Stolzl';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    color: #14004B;
+    margin: 0;
+}
+
+.HeaderContent{
+    font-family: 'Stolzl';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    color: #4164EE;
+    margin: 0;
+}
+
+.HeaderContentDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
