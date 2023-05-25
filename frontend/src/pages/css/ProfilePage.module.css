@@ -2,9 +2,14 @@
 .AvatarImg{
     width: 200px;
     height: 200px;
-    left: 300px;
-    top: 40px;
     background-color: #14004B;
+    display: block;
+}
+
+.AvatarWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .FormFull{
@@ -12,3 +17,10 @@
     height: 32px;
 }
 
+.FormDiv{
+    width: 350px;
+}
+
+.FormDiv input{
+    width: 100%;
+}

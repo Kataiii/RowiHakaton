@@ -38,3 +38,11 @@
 .Tag:hover{
     background-color: #314bb5;
 }
+
+.Btn{
+    background-color: #4164EE;
+    color: #FEFEFE;
+    font-family: 'Inter';
+    font-size: 20px;
+    border-radius: 20px;
+}

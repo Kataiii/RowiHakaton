@@ -22,3 +22,8 @@ export const selectSendingStatus = createDraftSafeSelector(
     [(state: RootState) => state.chatReducer.sendMessageStatus],
     (status) => status
 );
+
+export const selectChatInfo = createDraftSafeSelector(
+    [(state: RootState) => state.chatReducer.info],
+    (chatInfo) => chatInfo
+);

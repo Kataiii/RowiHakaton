@@ -20,7 +20,7 @@ export const HomeLayout: React.FC = () => {
     const role = useAppSelector(viewerSelectors.selectRole);
 
     return (
-        <Layout style={{ height: '100%' }}>
+        <Layout style={{minHeight: '100vh' }}>
             <Sider theme='light'>
                 <div className={styles.LogoDivWrap}>
                     <img className={styles.LogoImage} src={Logo}/>

@@ -30,34 +30,36 @@ const MyFormItem = ({ name, ...props }: FormItemProps) => {
 };
 
 const ProfilePage: React.FC = () => {
-    return(
-        <div>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-                <Avatar className={styles.AvatarImg} />
-                <div style={{ marginLeft: '558px', marginTop: '81px'}}>
-                <Form name="form_item_path" layout="horizontal">
-                    <MyFormItemGroup prefix={['user']}>
-                    <MyFormItemGroup prefix={['name']}>
-                        <MyFormItem name="lastName" label='Фамилия'>
-                        <Input className={styles.FormFull}/>
-                        </MyFormItem>
-                        <MyFormItem name="firstName" label="Имя">
-                        <Input />
-                        </MyFormItem>
-                    </MyFormItemGroup>
-                    <MyFormItem name="middleName" label="Отчество">
-                        <Input />
-                    </MyFormItem>
-                    </MyFormItemGroup>
-                    <Button type="primary" htmlType="submit" style={{backgroundColor:'#4164EE'}}>
-                    Сохранить
-                    </Button>
-                </Form>
-                </div>
-            </div>
+  return (
+    <div>
+      <div style={{ display: 'flex', justifyContent: 'space-evenly', padding: '5% 0'}}>
+        <div className={styles.AvatarWrap}>
+          <Avatar className={styles.AvatarImg} />
         </div>
+        <div>
+          <Form className={styles.FormDiv} name="form_item_path" layout="horizontal">
+            <MyFormItemGroup prefix={['user']}>
+              <MyFormItemGroup prefix={['name']}>
+                <MyFormItem name="lastName" label='Фамилия'>
+                  <Input className={styles.FormFull} />
+                </MyFormItem>
+                <MyFormItem name="firstName" label="Имя">
+                  <Input />
+                </MyFormItem>
+              </MyFormItemGroup>
+              <MyFormItem name="middleName" label="Отчество">
+                <Input />
+              </MyFormItem>
+            </MyFormItemGroup>
+            <Button type="primary" htmlType="submit" style={{ backgroundColor: '#4164EE' }}>
+              Сохранить
+            </Button>
+          </Form>
+        </div>
+      </div>
+    </div>
 
-    )
+  )
 }
 
 export default ProfilePage;

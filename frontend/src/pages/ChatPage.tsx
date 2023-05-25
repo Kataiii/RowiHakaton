@@ -18,6 +18,7 @@ const ChatPage: React.FC = () => {
     const {id} = useParams();
     const dispatch = useAppDispatch();
     
+    const chatInfo = useAppSelector(chatSelectors.selectChatInfo);
     const role = useAppSelector(viewerSelectors.selectRole);
     const getChatInfoStatus = useAppSelector(chatSelectors.selectLoadingStatus);
     const messages = useAppSelector(chatSelectors.selectMessages)
@@ -29,23 +30,29 @@ const ChatPage: React.FC = () => {
         token: 'saddddddddasdasdasdsadasdasdas',
         role: 'consultant'
     };
+    const onClickHandler = () => {
+
+    }
 
     useEffect(() => {
         dispatch(getChatInfo(Number.parseInt(id ?? '')));
     }, [])
 
     return(
-        <div className={styles.ChatPage}>
+        <div className={styles.ChatPage} >
             <HeaderChat titleHeader={'Чат #'+((parseInt(id?? '')) +1)} 
                 contentHeader={companion.name + ' '+ companion.role} 
                 status='статус'/>
                 {getChatInfoStatus == RequestStatus.LOADING ? <PageLoader/> : <ChatCanvas messages={messages}/>}
             {
-                role === 'client'
-                ?
-                    <MainInputChat/>
+                chatInfo?.status == 'closed'?
+                    <button className={styles.Btn} onClick={onClickHandler}>Переоткрыть</button>
                 :
-                    <ManagerInput/>
+                    role === 'client'
+                    ?
+                        <MainInputChat/>
+                    :
+                        <ManagerInput/>
             }
             
         </div>
